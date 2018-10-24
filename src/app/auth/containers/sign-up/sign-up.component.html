@@ -1,0 +1,12 @@
+<section nz-row nzType="flex" nzJustify="center" nzAlign="middle">
+  <div nz-col [nzSpan]="10" [nzXs]="22" [nzSm]="17" [nzMd]="12">
+    <nz-card [nzTitle]="'auth.signUp' | translate">
+      <app-sign-up-form (submit)="signUp()"></app-sign-up-form>
+
+      <p>
+        {{ 'auth.alreadyHaveAnAccount?' | translate }}
+        <a routerLink="/auth/sign-in">{{ 'auth.signInHere' | translate }}</a>
+      </p>
+    </nz-card>
+  </div>
+</section>
