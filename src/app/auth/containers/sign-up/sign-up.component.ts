@@ -1,0 +1,15 @@
+import { Location } from '@angular/common';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.scss']
+})
+export class SignUpComponent {
+  constructor(private location: Location) {}
+
+  signUp(): void {
+    this.location.go('apps');
+  }
+}
