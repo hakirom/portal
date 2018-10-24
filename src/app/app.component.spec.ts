@@ -1,35 +1,35 @@
-import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { TestBed } from '@angular/core/testing';
+import { TranslateService } from '@ngx-translate/core';
+
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  }));
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+      providers: [
+        AppComponent,
+        { provide: TranslateService, useClass: MockTranslateService }
+      ]
+    });
   });
 
-  it(`should have as title 'portal'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('portal');
+  it('should create', () => {
+    const component = TestBed.get(AppComponent);
+    expect(component).toBeTruthy();
   });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to portal!');
+  it('should set "es" to TranslateService', () => {
+    TestBed.get(AppComponent);
+    const translateService = TestBed.get(TranslateService);
+
+    expect(translateService.lang).toBe('es');
   });
 });
+
+class MockTranslateService {
+  lang: string;
+
+  use(lang: string) {
+    this.lang = lang;
+  }
+}

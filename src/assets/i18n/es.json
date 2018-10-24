@@ -1,1 +1,7 @@
-{}
+{
+  "auth": {
+    "email": "Correo",
+    "password": "Contraseña",
+    "signIn": "Inicio de sesión"
+  }
+}
