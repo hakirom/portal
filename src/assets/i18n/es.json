@@ -1,7 +1,16 @@
 {
   "auth": {
+    "alreadyHaveAnAccount?": "¿Ya tienes cuenta?",
+    "dontHaveAnAccount?": "¿No tienes cuenta?",
     "email": "Correo",
     "password": "Contraseña",
-    "signIn": "Inicio de sesión"
+    "signIn": "Inicio de sesión",
+    "signInHere": "Inicia sesión aquí",
+    "signUp": "Regístrate",
+    "signUpHere": "Regístrate aquí"
+  },
+
+  "common": {
+    "name": "Nombre"
   }
 }

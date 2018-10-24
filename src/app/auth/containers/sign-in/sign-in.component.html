@@ -2,6 +2,11 @@
   <div nz-col [nzSpan]="10" [nzXs]="22" [nzSm]="17" [nzMd]="12">
     <nz-card [nzTitle]="'auth.signIn' | translate">
       <app-sign-in-form (submit)="signIn()"></app-sign-in-form>
+
+      <p>
+        {{ 'auth.dontHaveAnAccount?' | translate }}
+        <a routerLink="/auth/sign-up">{{ 'auth.signUpHere' | translate }}</a>
+      </p>
     </nz-card>
   </div>
 </section>

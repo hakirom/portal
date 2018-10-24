@@ -1,0 +1,28 @@
+<form (ngSubmit)="submitForm()" nz-form>
+  <nz-form-item>
+    <nz-form-label>{{ 'common.name' | translate }}</nz-form-label>
+    <nz-form-control>
+      <input type="text" [placeholder]="'common.name' | translate" nz-input>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label>{{ 'auth.email' | translate }}</nz-form-label>
+    <nz-form-control>
+      <input type="text" [placeholder]="'auth.email' | translate" nz-input>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label>{{ 'auth.password' | translate }}</nz-form-label>
+    <nz-form-control>
+      <input type="password" [placeholder]="'auth.password' | translate" nz-input>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <button type="submit" nz-button nzType="primary">{{ 'auth.signUp' | translate }}</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
